@@ -384,7 +384,7 @@ def page_proyek():
 
 def page_dashboard():
     # Menampilkan judul halaman dengan emoji
-    st.title("📊 Dashboard Analytics")
+    st.title("📊 Employee Attrition and Satisfaction Analysis Dashboard")
 
     # Menampilkan subheader
     st.subheader("Ringkasan Performa Data")
@@ -599,5 +599,6 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
 
 
