@@ -155,7 +155,7 @@ def render_sidebar_nav():
         ### 🔗 Media Sosial
         - [LinkedIn](https://www.linkedin.com/in/rfwfian/)
         - [Streamlit](https://my-portofolio2-fian.streamlit.app/)
-        - [Instagram](instagram.com/rfwfian)
+        - [Instagram](https://www.instagram.com/rfwfian)
         """
     )
 
@@ -599,4 +599,5 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
 
