@@ -99,7 +99,7 @@ Melakukan analisis mendalam terhadap penyebab karyawan resign.
 - Kategori Electronics adalah top performer
 - Waktu terbaik untuk promo adalah Q4''',
             # Flag apakah proyek memiliki gambar atau tidak
-            'url': 'https://drive.google.com/drive/folders/1Yknb9o_tWQI1_xlzhOSqWnJqNsXAsbG1',
+            'url': 'https://docs.google.com/presentation/d/1dvpe_zUuRGbdzRQSM0WQTIjHNSfwU-EMPWOpGxxfpxE/edit?usp=sharing',
             'has_image': False
         },
         # Proyek kedua
@@ -599,3 +599,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
