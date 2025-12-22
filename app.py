@@ -155,13 +155,43 @@ def render_project_filter(page):
 
     # Menampilkan tautan media sosial di sidebar
     st.sidebar.divider()
-    st.sidebar.markdown("""
-        ### 🔗 Media Sosial
-        - [LinkedIn](https://www.linkedin.com/in/rfwfian/)
-        - [Streamlit](https://my-portofolio2-fian.streamlit.app/)
-        - [GitHub](https://github.com/rfwfian)
-        - [Instagram](https://instagram.com/rfwfian)
-        """)
+    st.sidebar.markdown(
+    """
+    <style>
+    .social a {
+        text-decoration: none;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 8px;
+        color: inherit;
+    }
+    .social img {
+        width: 18px;
+        margin-right: 8px;
+    }
+    </style>
+    <H4 class="social-title">🔗 Media Sosial</H4>
+    
+    <p></p>
+
+    <div class="social">
+        <a href="https://www.linkedin.com/in/rfwfian/" target="_blank">
+            💼 LinkedIn
+        </a>
+        <a href="https://github.com/rfwfian" target="_blank">
+            <img src="https://cdn.simpleicons.org/github/000000"/> GitHub
+        </a>
+        <a href="https://instagram.com/rfwfian" target="_blank">
+            <img src="https://cdn.simpleicons.org/instagram/E4405F"/> Instagram
+        </a>
+        <a href="https://my-portofolio2-fian.streamlit.app/" target="_blank">
+            <img src="https://cdn.simpleicons.org/streamlit/FF4B4B"/> Streamlit
+        </a>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 
     # Menampilkan pemisah lagi di sidebar
     st.sidebar.markdown("---")
@@ -590,4 +620,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
