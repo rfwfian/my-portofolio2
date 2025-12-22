@@ -57,10 +57,6 @@ def generate_dashboard_data():
         'Conversion': np.random.uniform(0.01, 0.1, 30)
     })
 
-# Test: Lihat hasil data yang dihasilkan
-# dashboard_data = generate_dashboard_data()
-# dashboard_data.head()
-
 # Dekorator untuk meng-cache data skills
 @st.cache_data
 # Fungsi untuk mengembalikan data skills/keahlian
@@ -78,17 +74,11 @@ def get_skills_data():
 @st.cache_data
 # Fungsi untuk mengembalikan data proyek dengan kemampuan filter
 def get_projects_data():
-    # Membuat list berisi data-data proyek
-    projects = [
-        # Proyek pertama
+    return pd.DataFrame([
         {
-            # Judul proyek dengan emoji
-            'title': '📊 Proyek 1 : Employee Attrition and Satisfaction Analyst',
-            # Kategori proyek
+            'title': '📊 Employee Attrition and Satisfaction Analysis',
             'category': 'Dashboard',
-            # Tahun proyek dibuat
             'year': 2023,
-            # Deskripsi detail tentang proyek
             'description': '''**Deskripsi:**
 Melakukan analisis mendalam terhadap penyebab karyawan resign.
 
@@ -98,19 +88,13 @@ Melakukan analisis mendalam terhadap penyebab karyawan resign.
 - Total sales meningkat 45% YoY
 - Kategori Electronics adalah top performer
 - Waktu terbaik untuk promo adalah Q4''',
-            # Flag apakah proyek memiliki gambar atau tidak
-            'url': 'https://docs.google.com/presentation/d/1dvpe_zUuRGbdzRQSM0WQTIjHNSfwU-EMPWOpGxxfpxE/edit?usp=sharing',
+            'url': 'https://docs.google.com/presentation/d/1dvpe_zUuRGbdzRQSM0WQTIjHNSfwU-EMPWOpGxxfpxE/edit',
             'has_image': False
         },
-        # Proyek kedua
         {
-            # Judul proyek dengan emoji
-            'title': '📈 Proyek 2 : Evaluasi Kinerja Bisnis Bee Cycle',
-            # Kategori proyek
+            'title': '📈 Evaluasi Kinerja Bisnis Bee Cycle',
             'category': 'Visualization',
-            # Tahun proyek dibuat
             'year': 2025,
-            # Deskripsi detail tentang proyek
             'description': '''**Deskripsi:**
 Melakukan Analisa Mengenai Penjualan Sepeda.
 
@@ -120,13 +104,10 @@ Melakukan Analisa Mengenai Penjualan Sepeda.
 - 5 customer segments identified
 - Average CLV per segment
 - Churn risk prediction''',
-            # Flag apakah proyek memiliki gambar atau tidak
-            'url': 'https://docs.google.com/presentation/d/1ULKgM7Ev7aDrTG__epGIPZYKWR2BMFyEWddOE1JTEIg/edit?usp=sharing',
+            'url': 'https://docs.google.com/presentation/d/1ULKgM7Ev7aDrTG__epGIPZYKWR2BMFyEWddOE1JTEIg/edit',
             'has_image': False
         }
-    ]
-    # Mengkonversi list projects menjadi DataFrame dan mengembalikannya
-    return pd.DataFrame(projects)
+    ])
 
 # Fungsi untuk menampilkan garis pemisah
 def render_divider():
@@ -146,18 +127,40 @@ def render_sidebar_nav():
         ["🏠 Beranda", "👤 Tentang Saya", "📁 Proyek", "📊 Dashboard", "📧 Contact"]
     )
 
+    return page
+
+def render_project_filter(page):
+    selected_category, selected_years = None, None
+
+    if page == "📁 Proyek":
+        st.sidebar.divider()
+        st.sidebar.subheader("🔍 Filter Proyek")
+
+        # Membuat 2 kolom untuk filter
+        selected_category = st.sidebar.multiselect(
+            "Kategori",
+            ['Dashboard', 'Visualization','EDA']
+            # default=['Dashboard']
+        )
+    
+        st.sidebar.subheader("📅 Tahun Proyek")
+        # available_years = 
+        selected_years = [
+            year for year in [2022, 2023, 2024, 2025]
+            if st.sidebar.checkbox(str(year), True)
+        ]
+
     # Menampilkan pemisah di sidebar
-    st.sidebar.markdown("---")
+    # st.sidebar.markdown("---")
 
     # Menampilkan tautan media sosial di sidebar
-    st.sidebar.markdown(
-        """
+    st.sidebar.divider()
+    st.sidebar.markdown("""
         ### 🔗 Media Sosial
         - [LinkedIn](https://www.linkedin.com/in/rfwfian/)
         - [Streamlit](https://my-portofolio2-fian.streamlit.app/)
-        - [Instagram](https://www.instagram.com/rfwfian)
-        """
-    )
+        - [Instagram](https://instagram.com/rfwfian)
+        """)
 
     # Menampilkan pemisah lagi di sidebar
     st.sidebar.markdown("---")
@@ -166,7 +169,7 @@ def render_sidebar_nav():
     st.sidebar.caption("© 2025 Portofolio Saya")
 
     # Mengembalikan halaman yang dipilih user
-    return page
+    return selected_category, selected_years
 
 # Fungsi untuk menampilkan foto profil
 def render_profile_image():
@@ -326,34 +329,24 @@ def page_tentang_saya():
         """
     )
 
-def page_proyek():
-    st.sidebar.subheader("🔍 Filter Proyek")
-
-    # Membuat 2 kolom untuk filter
-    selected_category = st.sidebar.multiselect(
-        "Kategori",
-        ['Dashboard', 'Visualization','EDA'],
-        default=['Dashboard', 'Visualization']
-    )
-    
-    st.sidebar.subheader("📅 Tahun Proyek")
-    available_years = [2022, 2023, 2024, 2025]
-    selected_years = []
-    for year in available_years:
-        if st.sidebar.checkbox(str(year), value=True):
-            selected_years.append(year)
-
-    #judul halaman
-    st.markdown("## 📂 Proyek")
+    #DATA
+    def get_projects_data():
+        return pd.DataFrame({
+        "title": ["A", "B"],
+        "category": ["Dashboard", "EDA"],
+        "year": [2024, 2023]
+        })
+def page_proyek(projects_df, selected_category, selected_years):
+    st.title("📂 Proyek")
     st.caption("Kumpulan proyek data yang pernah saya kerjakan")
 
-    #DATA
-    projects_df = get_projects_data()
+    if not selected_category or not selected_years:
+        st.info("Silakan pilih filter di sidebar")
+        return
 
-    #filter data
     filtered_projects = projects_df[
-    (projects_df['category'].isin(selected_category)) &
-    (projects_df['year'].isin(selected_years))
+        (projects_df['category'].isin(selected_category)) &
+        (projects_df['year'].isin(selected_years))
     ]
     
     if filtered_projects.empty:
@@ -361,26 +354,28 @@ def page_proyek():
         return
         
     for _, project in filtered_projects.iterrows():
-            st.markdown("---")
+        st.markdown("---")
 
-            col_main, col_meta = st.columns([3, 1])
-        #Konten
-            with col_main:
-                st.markdown(f"### {project.get('title', 'Untitled Project')}")
-                st.markdown(project.get('description', '_Deskripsi belum tersedia_'))
+        col_left, col_right = st.columns([3, 1])
 
-                if project.get('url'):
-                    st.link_button("🔗 Lihat Detail Proyek", project['url'])
-        #Info
-            with col_meta:
-                st.markdown("**📌 Info Proyek**")
-                st.markdown(f"- 🏷️ {project.get('category', '-')}")
-                st.markdown(f"- 📅 {project.get('year', '-')}")
+        #left
+        with col_left:
+            st.subheader(project["title"])
+            st.write(project["description"])
+            if "tools" in project:
+                st.markdown(f"**Tools:** {project['tools']}")
             
-                if project.get('has_image'):
-                    img_path = Path(project.get('image_path', ''))
-                    if img_path.exists():
-                        st.image(str(img_path), use_column_width=True)
+            if "insights" in project:
+                st.markdown("**Key Insights:**")
+                for insight in project["insights"]:
+                    st.markdown(f"- {insight}")
+        st.link_button("🔗 Lihat Detail Proyek", project["url"])
+
+        #right
+        with col_right:
+            st.markdown("**📌 Info Proyek**")
+            st.markdown(f"- 🏷️ {project.get('category', '-')}")
+            st.markdown(f"- 📅 {project.get('year', '-')}")
 
 def page_dashboard():
     # Menampilkan judul halaman dengan emoji
@@ -573,32 +568,24 @@ def page_contact() -> None:
         """
     )
 
-def main() -> None:
-    # Build mapping dari sidebar labels ke page functions
-    pages: Dict[str, Callable[[], None]] = {
-        "🏠 Beranda": page_beranda,
-        "👤 Tentang Saya": page_tentang_saya,
-        "📁 Proyek": page_proyek,
-        "📊 Dashboard": page_dashboard,
-        "📧 Contact": page_contact,
-    }
-
+def main():
     # Render sidebar navigation
-    selected_page = render_sidebar_nav()
+    page = render_sidebar_nav()
+    selected_category, selected_years = render_project_filter(page)
 
-    # Jika halaman tidak valid, gunakan halaman pertama sebagai default
-    if not selected_page or selected_page not in pages:
-        selected_page = list(pages.keys())[0]
+    projects_df = get_projects_data()
 
-    # Panggil halaman yang dipilih
-    page_func = pages[selected_page]
-    try:
-        page_func()
-    except Exception as e:
-        st.exception(e)
+    # Build mapping dari sidebar labels ke page functions
+    if page == "🏠 Beranda":
+        page_beranda()
+    elif page == "👤 Tentang Saya":
+        page_tentang_saya()
+    elif page == "📁 Proyek":
+        page_proyek(projects_df, selected_category, selected_years)
+    elif page == "📊 Dashboard":
+        page_dashboard()
+    elif page == "📧 Contact":
+        page_contact()
 
 if __name__ == "__main__":
     main()
-
-
-
