@@ -599,6 +599,89 @@ def page_contact() -> None:
         """
     )
 
+def page_Reflection_Questions():
+    st.markdown("""
+<div style="padding:25px; border-radius:12px; background-color:#f8f9fa;">
+
+<h3>🔄 2. Mengapa interaktivitas menjadi bagian penting dari dashboard atau ML app?</h3>
+
+<p>
+Interaktivitas bukan sekadar fitur tambahan, tetapi <b>elemen inti</b> yang membuat
+dashboard atau ML app benar-benar berguna.
+</p>
+
+<p>
+Tanpa interaktivitas, dashboard hanya menampilkan insight dari satu sudut pandang,
+padahal setiap pengguna memiliki kebutuhan dan pertanyaan yang berbeda.
+</p>
+
+<h4>💡 Alasan Mengapa Interaktivitas Sangat Penting</h4>
+
+<b>Mendukung eksplorasi mandiri (self-service analytics)</b>
+<p>
+Dengan slider, selectbox, atau filter, pengguna dapat menjawab pertanyaan mereka sendiri
+tanpa harus meminta ulang ke data analyst. Hal ini menghemat waktu dan mempercepat
+pengambilan keputusan.
+</p>
+
+<b>Membantu memahami dampak perubahan</b>
+<p>
+Dalam dashboard bisnis atau ML app, interaktivitas memungkinkan user melihat bagaimana
+perubahan input memengaruhi output, misalnya perubahan tahun, kategori, atau parameter
+model.
+</p>
+
+<b>Meningkatkan engagement dan trust</b>
+<p>
+Ketika pengguna dapat mencoba berbagai skenario sendiri, dashboard tidak terasa sebagai
+“black box”, melainkan transparan dan dapat diuji.
+</p>
+
+<b>Menjembatani gap teknis dan bisnis</b>
+<p>
+Interaktivitas membantu menerjemahkan kompleksitas teknis menjadi pengalaman visual yang
+mudah dipahami oleh stakeholder non-teknis.
+</p>
+
+<hr>
+<b>Kesimpulan:</b> Interaktivitas menjadikan dashboard dan ML app
+<b>lebih actionable, transparan, dan relevan secara bisnis</b>.
+</div>
+""", unsafe_allow_html=True)
+
+st.markdown("""
+<div style="padding:25px; border-radius:12px; background-color:#f8f9fa;">
+<h3>🚀 1. Mengapa penting mendeploy project ke Streamlit dibandingkan hanya notebook ?</h3>
+
+<p>
+Mendeploy project ke <b>Streamlit</b> mengubah hasil analisis dari sekadar dokumen teknis
+menjadi <b>produk yang dapat digunakan langsung</b>.
+</p>
+
+<h4>📒 Keterbatasan Jupyter Notebook</h4>
+<ul>
+<li>Sulit diakses oleh orang non-teknis</li>
+<li>Tidak intuitif tanpa pengetahuan Python</li>
+<li>Bersifat statis</li>
+</ul>
+
+<h4>🎯 Value Utama Streamlit</h4>
+
+<b>Aksesibilitas</b>
+<p>Aplikasi bisa dibuka melalui browser tanpa instalasi tambahan.</p>
+
+<b>Interaktivitas</b>
+<p>Pengguna dapat mengeksplorasi data secara real-time.</p>
+
+<b>Kemudahan bagi Stakeholder Non-Teknis</b>
+<p>Insight disajikan dalam bentuk dashboard yang siap dipakai.</p>
+
+<hr>
+<b>Kesimpulan:</b> Deployment ke Streamlit mengubah <i>data analysis</i> menjadi
+<b>data product</b>.
+</div>
+""", unsafe_allow_html=True)
+
 def main():
     # Render sidebar navigation
     page = render_sidebar_nav()
@@ -617,8 +700,11 @@ def main():
         page_dashboard()
     elif page == "📧 Contact":
         page_contact()
+    elif page == "📝Reflection Questions":
+        page_Reflection_Questions()
 
 if __name__ == "__main__":
     main()
+
 
 
