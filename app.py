@@ -159,6 +159,7 @@ def render_project_filter(page):
         ### 🔗 Media Sosial
         - [LinkedIn](https://www.linkedin.com/in/rfwfian/)
         - [Streamlit](https://my-portofolio2-fian.streamlit.app/)
+        - [GitHub](https://github.com/rfwfian)
         - [Instagram](https://instagram.com/rfwfian)
         """)
 
@@ -589,3 +590,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
