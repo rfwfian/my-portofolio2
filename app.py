@@ -603,21 +603,21 @@ def page_Reflection_Questions():
 
     st.markdown("""
     <div style="padding:25px; border-radius:12px; background-color:#f8f9fa;">
-    <h3>🚀 1. Mengapa penting mendeploy project ke Streamlit dibandingkan hanya notebook ?</h3>
+    <h3>1. Mengapa penting mendeploy project ke Streamlit dibandingkan hanya notebook ?</h3>
 
     <p>
     Mendeploy project ke <b>Streamlit</b> mengubah hasil analisis dari sekadar dokumen teknis
     menjadi <b>produk yang dapat digunakan langsung</b>.
     </p>
 
-    <h4>📒 Keterbatasan Jupyter Notebook</h4>
+    <h4>Keterbatasan Jupyter Notebook</h4>
     <ul>
     <li>Sulit diakses oleh orang non-teknis</li>
     <li>Tidak intuitif tanpa pengetahuan Python</li>
     <li>Bersifat statis</li>
     </ul>
 
-    <h4>🎯 Value Utama Streamlit</h4>
+    <h4>Value Utama Streamlit</h4>
 
     <b>Aksesibilitas</b>
     <p>Aplikasi bisa dibuka melalui browser tanpa instalasi tambahan.</p>
@@ -637,7 +637,7 @@ def page_Reflection_Questions():
     st.markdown("""
     <div style="padding:25px; border-radius:12px; background-color:#f8f9fa;">
 
-    <h3>🔄 2. Mengapa interaktivitas menjadi bagian penting dari dashboard atau ML app?</h3>
+    <h3>2. Mengapa interaktivitas menjadi bagian penting dari dashboard atau ML app?</h3>
 
     <p>
     Interaktivitas bukan sekadar fitur tambahan, tetapi <b>elemen inti</b> yang membuat
@@ -649,7 +649,7 @@ def page_Reflection_Questions():
     padahal setiap pengguna memiliki kebutuhan dan pertanyaan yang berbeda.
     </p>
 
-    <h4>💡 Alasan Mengapa Interaktivitas Sangat Penting</h4>
+    <h4>Alasan Mengapa Interaktivitas Sangat Penting</h4>
 
     <b>Mendukung eksplorasi mandiri (self-service analytics)</b>
     <p>
@@ -706,3 +706,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
