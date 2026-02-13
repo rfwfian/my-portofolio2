@@ -124,7 +124,7 @@ def render_sidebar_nav():
         # Label untuk radio button
         "Pilih halaman:",
         # Opsi halaman yang tersedia
-        ["🏠 Beranda", "👤 Tentang Saya", "📁 Proyek", "📊 Dashboard", "📊 E-Commerce Analytics Overview", "📧 Contact", "📝Reflection Questions"]
+        ["🏠 Beranda", "👤 Tentang Saya", "📁 Proyek", "📊 Dashboard", "📊 E-Commerce Dashboard", "📧 Contact", "📝Reflection Questions"]
     )
 
     return page
@@ -706,6 +706,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
