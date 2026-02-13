@@ -506,6 +506,104 @@ def page_dashboard():
     )
     st.plotly_chart(fig_job_sat, use_container_width=True)
 
+def page_dashboardEComm():
+    # Menampilkan judul halaman dengan emoji
+    st.title("📊 E-Commerce Analytics Overview")
+
+    # Menampilkan subheader
+    st.subheader("Ringkasan Performa Data")
+
+    # Mendapatkan data dashboard
+    dashboard_data = generate_dashboard_data()
+
+    col1, col2, col3 = st.columns(3)
+    col1.metric("Total Employee", "1,470")
+    col2.metric("Total Active Employee", "1,233")
+    col3.metric("Total Attrition", "237")
+
+    # Menampilkan garis pemisah
+    render_divider()
+    
+    #PIE
+    pie_col1, pie_col2 = st.columns(2)
+
+    #pie chart 1
+    with pie_col1:
+        st.subheader("Attrition by Marital Status")
+
+        marital_data ={
+            "Marital Status": ["Married", "Single", "Divorced"],
+            "Total": [673, 470, 327]
+        }
+
+        fig_marital = px.pie(
+            marital_data,
+            names="Marital Status",
+            values="Total",
+            title="Attrition Distribution by Marital Status",
+            hole=0.4
+        )
+
+        fig_marital.update_traces(
+            textinfo="label+percent",
+            pull=[0.05, 0, 0]
+        )
+
+        st.plotly_chart(fig_marital, use_container_width=True)
+
+    #pie chart 2
+    with pie_col2:
+        st.subheader("Attrition by Gender")
+    
+        gender_data = {
+            "Gender": ["Male", "Female"],
+            "Total": [882, 588]
+        }
+
+        fig_gender = px.pie(
+        gender_data,
+        names="Gender",
+        values="Total",
+        title="Attrition Distribution by Gender",
+        hole=0.4
+        )
+
+        fig_gender.update_traces(
+        textinfo="label+percent",
+        pull=[0.05, 0]
+        )
+        st.plotly_chart(fig_gender, use_container_width=True)
+
+    #bar chart
+    st.subheader("Attrition by Job Satisfaction")
+
+    # data job
+    job_satisfaction_data = {
+        "Job Satisfaction Level": ["1", "2", "3", "4"],
+        "Total Employees": [66, 46, 73, 52]
+    }
+
+    #create bar chart
+    fig_job_sat = px.bar(
+        job_satisfaction_data,
+        x="Job Satisfaction Level",
+        y="Total Employees",
+        title="Employee Count by Job Satisfaction Level",
+        text="Total Employees"
+    )
+
+    #atur sumbu Y
+    fig_job_sat.update_layout(
+        yaxis=dict(
+            tickmode="array",
+            tickvals=[0, 20, 40, 60, 80],
+            range=[0, 80]
+        ),
+        xaxis_title="Job Satisfaction",
+        yaxis_title="Number of Employees"
+    )
+    st.plotly_chart(fig_job_sat, use_container_width=True)
+
 def _is_valid_email(email: str) -> bool:
     """Validasi email sederhana untuk form."""
     if not email:
@@ -700,7 +798,7 @@ def main():
     elif page == "📊 Dashboard":
         page_dashboard()
     elif page == "📊 E-Commerce Dashboard":
-        page_dashboard()
+        page_dashboardEComm()
     elif page == "📧 Contact":
         page_contact()
     elif page == "📝Reflection Questions":
@@ -708,6 +806,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
