@@ -546,7 +546,10 @@ def page_dashboardEComm():
             fig_gauge = go.Figure(go.Indicator(
                 mode="gauge+number",
                 value=71.79,
-                number={'suffix': "%"},
+                number={
+                    'suffix': "%",
+                    'valueformat': ".2f"
+               },
                 gauge={
                     'axis': {'range': [0, 100]},
                     'bar': {'color': "#2E6BD9"},
@@ -839,6 +842,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
