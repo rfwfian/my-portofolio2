@@ -507,102 +507,124 @@ def page_dashboard():
     st.plotly_chart(fig_job_sat, use_container_width=True)
 
 def page_dashboardEComm():
-    # Menampilkan judul halaman dengan emoji
-    st.title("📊 E-Commerce Analytics Overview")
+    st.set_page_config(layout="wide")
 
-    # Menampilkan subheader
-    st.subheader("Ringkasan Performa Data")
+    # =========================
+    # HEADER
+    # =========================
+    header_col1, header_col2 = st.columns([5,1])
 
-    # Mendapatkan data dashboard
-    dashboard_data = generate_dashboard_data()
-
-    col1, col2, col3 = st.columns(3)
-    col1.metric("Total Employee", "1,470")
-    col2.metric("Total Active Employee", "1,233")
-    col3.metric("Total Attrition", "237")
-
-    # Menampilkan garis pemisah
-    render_divider()
-    
-    #PIE
-    pie_col1, pie_col2 = st.columns(2)
-
-    #pie chart 1
-    with pie_col1:
-        st.subheader("Attrition by Marital Status")
-
-        marital_data ={
-            "Marital Status": ["Married", "Single", "Divorced"],
-            "Total": [673, 470, 327]
-        }
-
-        fig_marital = px.pie(
-            marital_data,
-            names="Marital Status",
-            values="Total",
-            title="Attrition Distribution by Marital Status",
-            hole=0.4
+    with header_col1:
+        st.markdown(
+            "<h1 style='text-align:center;'>E-Commerce Analytics Overview</h1>",
+            unsafe_allow_html=True
         )
 
-        fig_marital.update_traces(
-            textinfo="label+percent",
-            pull=[0.05, 0, 0]
-        )
+    with header_col2:
+        st.selectbox("Month Name", ["All", "Jan", "Feb", "Mar"])
 
-        st.plotly_chart(fig_marital, use_container_width=True)
+    st.markdown("---")
 
-    #pie chart 2
-    with pie_col2:
-        st.subheader("Attrition by Gender")
-    
-        gender_data = {
-            "Gender": ["Male", "Female"],
-            "Total": [882, 588]
-        }
+    # =========================
+    # MAIN LAYOUT
+    # =========================
+    left_col, right_col = st.columns([4,1])
 
-        fig_gender = px.pie(
-        gender_data,
-        names="Gender",
-        values="Total",
-        title="Attrition Distribution by Gender",
-        hole=0.4
-        )
+    # =========================
+    # LEFT SIDE (Charts)
+    # =========================
+    with left_col:
 
-        fig_gender.update_traces(
-        textinfo="label+percent",
-        pull=[0.05, 0]
-        )
-        st.plotly_chart(fig_gender, use_container_width=True)
+        # ROW 1
+        top_left, top_right = st.columns(2)
 
-    #bar chart
-    st.subheader("Attrition by Job Satisfaction")
+        # 🎯 GAUGE
+        with top_left:
+            st.subheader("Checkout Conversion Performance")
 
-    # data job
-    job_satisfaction_data = {
-        "Job Satisfaction Level": ["1", "2", "3", "4"],
-        "Total Employees": [66, 46, 73, 52]
-    }
+            fig_gauge = go.Figure(go.Indicator(
+                mode="gauge+number",
+                value=71.79,
+                number={'suffix': "%"},
+                gauge={
+                    'axis': {'range': [0, 100]},
+                    'bar': {'color': "#2E6BD9"},
+                    'threshold': {
+                        'line': {'color': "red", 'width': 4},
+                        'value': 75
+                    }
+                }
+            ))
 
-    #create bar chart
-    fig_job_sat = px.bar(
-        job_satisfaction_data,
-        x="Job Satisfaction Level",
-        y="Total Employees",
-        title="Employee Count by Job Satisfaction Level",
-        text="Total Employees"
-    )
+            st.plotly_chart(fig_gauge, use_container_width=True)
 
-    #atur sumbu Y
-    fig_job_sat.update_layout(
-        yaxis=dict(
-            tickmode="array",
-            tickvals=[0, 20, 40, 60, 80],
-            range=[0, 80]
-        ),
-        xaxis_title="Job Satisfaction",
-        yaxis_title="Number of Employees"
-    )
-    st.plotly_chart(fig_job_sat, use_container_width=True)
+        # 📊 USER ACTION TABLE
+        with top_right:
+            st.subheader("User Action Performance")
+
+            action_data = pd.DataFrame({
+                "Action": ["read_reviews", "search", "product_view"],
+                "Count of Action": [343, 320, 292]
+            })
+
+            st.dataframe(action_data, use_container_width=True)
+
+        # ROW 2
+        bottom_left, bottom_right = st.columns(2)
+
+        # 📊 CATEGORY PERFORMANCE
+        with bottom_left:
+            st.subheader("Category Performance")
+
+            cat_data = pd.DataFrame({
+                "Category": ["Tablets", "Mobile & Acc", "Digital Devices",
+                             "Women's Fashion", "Laptop & Desktop",
+                             "TV & Appliances", "Accessories"],
+                "Revenue": [225000, 127000, 122000, 103000, 90000, 85000, 77000]
+            })
+
+            fig_cat = px.bar(
+                cat_data.sort_values("Revenue"),
+                x="Revenue",
+                y="Category",
+                orientation="h",
+                color_discrete_sequence=["#2E6BD9"]
+            )
+
+            st.plotly_chart(fig_cat, use_container_width=True)
+
+        # 📊 SUB CATEGORY PERFORMANCE
+        with bottom_right:
+            st.subheader("Sub Category Performance")
+
+            subcat_data = pd.DataFrame({
+                "SubCategory": ["Watches", "Tops", "Mobile", "Cases",
+                                "iPad", "Laptop", "Ethnic Wear"],
+                "Count": [36, 27, 25, 23, 21, 21, 18]
+            })
+
+            fig_sub = px.bar(
+                subcat_data.sort_values("Count"),
+                x="Count",
+                y="SubCategory",
+                orientation="h",
+                color_discrete_sequence=["#2E6BD9"]
+            )
+
+            st.plotly_chart(fig_sub, use_container_width=True)
+
+    # =========================
+    # RIGHT SIDE (KPI CARDS)
+    # =========================
+    with right_col:
+
+        st.markdown("### ")
+
+        st.metric("Total Users", "401")
+        st.metric("Total Sessions", "2064")
+        st.metric("Total Revenue", "2M")
+        st.metric("Total Transactions", "201")
+        st.metric("Sum of Quantity", "596")
 
 def _is_valid_email(email: str) -> bool:
     """Validasi email sederhana untuk form."""
@@ -806,6 +828,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
