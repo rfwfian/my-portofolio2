@@ -564,8 +564,8 @@ def page_dashboardEComm():
             st.subheader("User Action Performance")
 
             action_data = pd.DataFrame({
-                "Action": ["read_reviews", "search", "product_view"],
-                "Count of Action": [343, 320, 292]
+                "Action": ["read_reviews", "search", "product_view", "add_to_cart", "checkout", "click_wishlist_page", "purchase", "first_app_open", "add_review", "add_to_wishlist", "product_review", "add_to_wishist"],
+                "Count of Action": [343, 320, 292, 280, 202, 202, 201, 121, 69, 33, 22, 5]
             })
 
             st.dataframe(action_data, use_container_width=True)
@@ -829,6 +829,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
