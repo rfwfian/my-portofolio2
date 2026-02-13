@@ -597,12 +597,22 @@ def page_dashboardEComm():
                 "Revenue": [225000, 127000, 122000, 103000, 90000, 85000, 77000]
             })
 
+            cat_sorted = cat_data.sort_values("Revenue")
+
             fig_cat = px.bar(
-                cat_data.sort_values("Revenue"),
+                cat_sorted,
                 x="Revenue",
                 y="Category",
                 orientation="h",
+                text=cat_sorted["Revenue"].apply(lambda x: f"{x/1000:.0f}K"),
                 color_discrete_sequence=["#2E6BD9"]
+            )
+
+            fig_cat.update_traces(textposition="outside") #samping
+
+            fig_cat.update_layout(
+                xaxis_title="Total Revenue",
+                yaxis_title="Category"
             )
 
             st.plotly_chart(fig_cat, use_container_width=True)
@@ -617,12 +627,22 @@ def page_dashboardEComm():
                 "Count": [36, 27, 25, 23, 21, 21, 18]
             })
 
+            sub_sorted = subcat_data.sort_values("Count")
+
             fig_sub = px.bar(
-                subcat_data.sort_values("Count"),
+                sub_sorted,
                 x="Count",
                 y="SubCategory",
                 orientation="h",
+                text="Count",
                 color_discrete_sequence=["#2E6BD9"]
+            )
+
+            fig_sub.update_traces(textposition="outside")
+
+            fig_sub.update_layout(
+                xaxis_title="Count of SubCategory",
+                yaxis_title="SubCategory"
             )
 
             st.plotly_chart(fig_sub, use_container_width=True)
@@ -842,6 +862,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
