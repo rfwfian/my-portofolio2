@@ -556,7 +556,17 @@ def page_dashboardEComm():
                     }
                 }
             ))
-
+            
+            #add parameter
+            fig_gauge.add_annotation(
+                # posisi horizontal
+                x=0.83,  
+                # posisi vertikal
+                y=0.75,  
+                text="75.00%",
+                showarrow=False,
+                font=dict(size=14, color="black")
+            )
             st.plotly_chart(fig_gauge, use_container_width=True)
 
         # 📊 USER ACTION TABLE
@@ -829,6 +839,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
