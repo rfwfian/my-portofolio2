@@ -699,6 +699,8 @@ def main():
         page_proyek(projects_df, selected_category, selected_years)
     elif page == "📊 Dashboard":
         page_dashboard()
+    elif page == "📊 E-Commerce Dashboard":
+        page_dashboard()
     elif page == "📧 Contact":
         page_contact()
     elif page == "📝Reflection Questions":
@@ -706,6 +708,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
