@@ -198,7 +198,7 @@ def render_project_filter(page):
     st.sidebar.markdown("---")
 
     # Menampilkan caption/teks kecil di sidebar
-    st.sidebar.caption("© 2025 Portofolio Saya")
+    st.sidebar.caption("© 2026 Portofolio Saya")
 
     # Mengembalikan halaman yang dipilih user
     return selected_category, selected_years
@@ -874,6 +874,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
