@@ -650,38 +650,27 @@ def page_dashboardEComm():
     # =========================
     # RIGHT SIDE (KPI CARDS)
     # =========================
+    st.markdown("""
+    <style>
+    .kpi-column {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+    }
+    </style>
+    """, unsafe_allow_html=True)
+    
     with right_col:
-
-        st.markdown("<br>", unsafe_allow_html=True)
-
-        kpi1 = st.container()
-        kpi2 = st.container()
-        kpi3 = st.container()
-        kpi4 = st.container()
-        kpi5 = st.container()
+        st.markdown('<div class="kpi-column">', unsafe_allow_html=True)
     
-        with kpi1:
-            st.metric("Total Users", "401")
+        st.metric("Total Users", "401")
+        st.metric("Total Sessions", "2064")
+        st.metric("Total Revenue", "2M")
+        st.metric("Total Transactions", "201")
+        st.metric("Sum of Quantity", "596")
     
-        st.markdown("<br><br>", unsafe_allow_html=True)
-    
-        with kpi2:
-            st.metric("Total Sessions", "2064")
-    
-        st.markdown("<br><br>", unsafe_allow_html=True)
-    
-        with kpi3:
-            st.metric("Total Revenue", "2M")
-    
-        st.markdown("<br><br>", unsafe_allow_html=True)
-    
-        with kpi4:
-            st.metric("Total Transactions", "201")
-    
-        st.markdown("<br><br>", unsafe_allow_html=True)
-    
-        with kpi5:
-            st.metric("Sum of Quantity", "596")
+        st.markdown('</div>', unsafe_allow_html=True)
 
 def _is_valid_email(email: str) -> bool:
     """Validasi email sederhana untuk form."""
@@ -885,6 +874,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
