@@ -76,7 +76,7 @@ def get_skills_data():
 def get_projects_data():
     return pd.DataFrame([
         {
-            'title': '📊 Employee Attrition and Satisfaction Analysis',
+            'title': '📊 Employee Attrition and Satisfaction Analyst',
             'category': 'Dashboard',
             'year': 2023,
             'description': '''**Deskripsi:**
@@ -706,4 +706,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
