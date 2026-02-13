@@ -9,6 +9,7 @@ import numpy as np
 
 # Mengimpor Plotly Express untuk visualisasi data interaktif
 import plotly.express as px
+import plotly.graph_objects as go
 
 # Mengimpor datetime untuk menangani data tanggal dan waktu
 from datetime import datetime
@@ -828,6 +829,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
