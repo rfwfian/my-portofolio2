@@ -691,12 +691,12 @@ def page_dataScience():
         col_btn1, col_btn2 = st.columns(2)
 
         with col_btn1:
-            if st.button("📥 Download CV"):
-                st.success("CV berhasil diunduh!")
+            if st.button("📊 Link Google Colab"):
+                "https://colab.research.google.com/drive/1nCAYJYnvvTfq3VK_GKIdV3gRVORVjjLQ?usp=sharing"
 
         with col_btn2:
-            if st.button("💬 Hubungi Saya"):
-                st.info("Silakan scroll ke halaman Contact!")
+            if st.button("📁 Link Google Drive"):
+                "https://drive.google.com/drive/folders/1bPigA-AI1PplNa0_ZwGsF7Qd3Gy9kWU9?usp=drive_link"
 
 def _is_valid_email(email: str) -> bool:
     """Validasi email sederhana untuk form."""
@@ -902,6 +902,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
