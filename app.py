@@ -672,6 +672,35 @@ def page_dashboardEComm():
         
             st.markdown('</div>', unsafe_allow_html=True)
 
+def page_beranda():
+    # intro
+    col1, col2 = st.columns([2, 1])
+
+    with col1:
+        st.title("🌟 Selamat Datang!")
+
+        st.markdown(
+            """
+            Halo, nama saya **Rahadian Firstya Wisesa (Fian)**. Seorang **Data Analyst**
+            yang berfokus pada mengolah data menjadi insight yang bernilai dan dapat ditindaklanjuti.
+
+            Dalam portfolio ini, saya menampilkan proyek data yang telah saya kerjakan,
+            yaitu *Employee Attrition and Satisfaction Analysis*.
+            """
+        )
+
+        st.write("")
+
+        col_btn1, col_btn2 = st.columns(2)
+
+        with col_btn1:
+            if st.button("📥 Download CV"):
+                st.success("CV berhasil diunduh!")
+
+        with col_btn2:
+            if st.button("💬 Hubungi Saya"):
+                st.info("Silakan scroll ke halaman Contact!")
+
 def _is_valid_email(email: str) -> bool:
     """Validasi email sederhana untuk form."""
     if not email:
@@ -876,6 +905,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
