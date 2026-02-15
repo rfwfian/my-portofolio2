@@ -672,8 +672,6 @@ def page_dashboardEComm():
         
             st.markdown('</div>', unsafe_allow_html=True)
 
-def page_dataScience():
-
 def _is_valid_email(email: str) -> bool:
     """Validasi email sederhana untuk form."""
     if not email:
@@ -878,6 +876,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
