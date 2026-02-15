@@ -672,7 +672,7 @@ def page_dashboardEComm():
         
             st.markdown('</div>', unsafe_allow_html=True)
 
-def page_beranda():
+def page_dataScience():
     # intro
     col1, col2 = st.columns([2, 1])
 
@@ -905,6 +905,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
