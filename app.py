@@ -647,30 +647,30 @@ def page_dashboardEComm():
 
             st.plotly_chart(fig_sub, use_container_width=True)
 
-    # =========================
-    # RIGHT SIDE (KPI CARDS)
-    # =========================
-    st.markdown("""
-    <style>
-    .kpi-column {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 100%;
-    }
-    </style>
-    """, unsafe_allow_html=True)
-    
-    with right_col:
-        st.markdown('<div class="kpi-column">', unsafe_allow_html=True)
-    
-        st.metric("Total Users", "401")
-        st.metric("Total Sessions", "2064")
-        st.metric("Total Revenue", "2M")
-        st.metric("Total Transactions", "201")
-        st.metric("Sum of Quantity", "596")
-    
-        st.markdown('</div>', unsafe_allow_html=True)
+        # =========================
+        # RIGHT SIDE (KPI CARDS)
+        # =========================
+        st.markdown("""
+        <style>
+        .kpi-column {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+        </style>
+        """, unsafe_allow_html=True)
+        
+        with right_col:
+            st.markdown('<div class="kpi-column">', unsafe_allow_html=True)
+        
+            st.metric("Total Users", "401")
+            st.metric("Total Sessions", "2064")
+            st.metric("Total Revenue", "2M")
+            st.metric("Total Transactions", "201")
+            st.metric("Sum of Quantity", "596")
+        
+            st.markdown('</div>', unsafe_allow_html=True)
 
 def page_dataScience():
 
@@ -878,6 +878,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
