@@ -677,15 +677,12 @@ def page_dataScience():
     col1, col2 = st.columns([2, 1])
 
     with col1:
-        st.title("🌟 Selamat Datang!")
+        st.title("🌟 Portofolio Data Science")
 
         st.markdown(
             """
-            Halo, nama saya **Rahadian Firstya Wisesa (Fian)**. Seorang **Data Analyst**
-            yang berfokus pada mengolah data menjadi insight yang bernilai dan dapat ditindaklanjuti.
-
-            Dalam portfolio ini, saya menampilkan proyek data yang telah saya kerjakan,
-            yaitu *Employee Attrition and Satisfaction Analysis*.
+            Pada halaman ini, saya menampilkan proyek data science yang telah saya kerjakan,
+            yaitu *Customer Churn Prediction Using Machine Learning*.
             """
         )
 
@@ -906,6 +903,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
