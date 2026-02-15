@@ -896,7 +896,7 @@ def main():
         page_dashboard()
     elif page == "📊 E-Commerce Dashboard":
         page_dashboardEComm()
-    elif page == "📊 Daata Science":
+    elif page == "📊 Data Science":
         page_dataScience()
     elif page == "📧 Contact":
         page_contact()
@@ -905,6 +905,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
