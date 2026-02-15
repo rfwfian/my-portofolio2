@@ -677,7 +677,7 @@ def page_dataScience():
     col1, col2 = st.columns([2, 1])
 
     with col1:
-        st.title("🌟 Portofolio Data Science")
+        st.title("🧠 Portofolio Data Science")
 
         st.markdown(
             """
@@ -906,6 +906,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
