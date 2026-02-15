@@ -673,7 +673,7 @@ def page_dashboardEComm():
         st.markdown('</div>', unsafe_allow_html=True)
 
 def page_dataScience():
-    st.link_button("🔗 Lihat Detail Proyek", project["url"])
+        st.subheader("🔗 Link Proyek")
 
 def _is_valid_email(email: str) -> bool:
     """Validasi email sederhana untuk form."""
@@ -879,6 +879,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
