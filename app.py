@@ -700,6 +700,7 @@ def page_dataScience():
         with col_btn2:
             if st.button("💬 Hubungi Saya"):
                 st.info("Silakan scroll ke halaman Contact!")
+                st.link_button("🔗 Lihat Detail Proyek", project["url"])
 
 def _is_valid_email(email: str) -> bool:
     """Validasi email sederhana untuk form."""
@@ -905,6 +906,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
