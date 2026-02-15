@@ -692,13 +692,13 @@ def page_dataScience():
 
         with col_btn1:
             st.link_button(
-                "📊 Lihat Detail Proyek Pada Google Colab",
+                "🔵 Lihat Detail Proyek Pada Google Colab",
                 "https://colab.research.google.com/drive/1nCAYJYnvvTfq3VK_GKIdV3gRVORVjjLQ?usp=sharing"
             )
         
         with col_btn2:
             st.link_button(
-                "📁 Link Google Drive",
+                "🧑‍💻 Lihat Detail Proyek Pada Google Drive",
                 "https://drive.google.com/drive/folders/1bPigA-AI1PplNa0_ZwGsF7Qd3Gy9kWU9?usp=drive_link"
             )
 
@@ -906,6 +906,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
