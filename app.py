@@ -548,7 +548,7 @@ def page_dashboardEComm():
                 value=71.4,
                 number={
                     'suffix': "%",
-                    'valueformat': ".2f"
+                    'valueformat': ".1f"
                },
                 gauge={
                     'axis': {'range': [0, 100]},
@@ -906,6 +906,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
