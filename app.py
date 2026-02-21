@@ -336,7 +336,7 @@ def page_tentang_saya():
         )
 
     # Sertifikasi
-    st.subheader("📚 Sertifikasi")
+    st.subheader("📚 Sertifikasi & Bootcamp")
 
     col1, col2, col3 = st.columns(3)
 
@@ -356,7 +356,7 @@ def page_tentang_saya():
 
     col3.markdown(
         """
-        **Micorosft Excel Expert Certification**  
+        **Microsoft Excel Expert Certification**  
         ✅ ⏳ On Progress
         """
     )
@@ -906,6 +906,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
