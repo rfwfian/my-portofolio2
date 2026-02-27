@@ -395,7 +395,7 @@ def page_tentang_saya():
     with col2:
         st.markdown("""
         **dibimbing**  
-        Data Analyst / Data Science  
+        Data Analyst & Data Science  
         Agustus 2025 - Februari 2026
         """)
     
@@ -1032,6 +1032,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
