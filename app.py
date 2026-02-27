@@ -438,10 +438,11 @@ def page_tentang_saya():
     """
     
     st.markdown(button_style, unsafe_allow_html=True)
-    
+
+    #MySkill
     with btn1:
         st.markdown("""
-        <a href="#" target="_blank">
+        <a href="https://drive.google.com/drive/folders/1Y1vxpX_Xt3RyM9diVabSLaYc-xgCLf3F" target="_blank">
             <button class="cert-btn">📄 Lihat Sertifikat</button>
         </a>
         """, unsafe_allow_html=True)
@@ -1012,6 +1013,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
