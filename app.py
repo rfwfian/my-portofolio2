@@ -410,12 +410,21 @@ def page_tentang_saya():
 
     col1, col2, col3, col4 = st.columns(4)
 
+    # with col1:
+    #     st.markdown("""
+    #     **MySkill**  
+    #     *Microsoft Excel Basic to Advanced*  
+    #     Juli 2025 - Agustus 2025
+    #     """)
+
     with col1:
         st.markdown("""
-        **MySkill**  
-        *Microsoft Excel Basic to Advanced*  
-        Juli 2025 - Agustus 2025
-        """)
+        <div class="card">
+        <b>MySkill</b><br>
+        Microsoft Excel Basic to Advanced<br>
+        <i>Juli 2025 - Agustus 2025</i>
+        </div>
+        """, unsafe_allow_html=True)
     
     with col2:
         st.markdown("""
@@ -983,6 +992,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
