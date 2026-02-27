@@ -65,10 +65,10 @@ def get_skills_data():
     # Mengembalikan DataFrame berisi daftar skill dan tingkat keahlian
     return pd.DataFrame({
         # Kolom nama skill
-        'Skill': ['Python', 'SQL', 'Tableau', 'PowerBI', 'Excel', 'Statistics'],
+        'Skill': ['Python', 'SQL', 'Tableau', 'Power BI', 'Excel', 'Public Speaking'],
 
         # Kolom profisiensi dengan nilai 0-100
-        'Level' : [4, 4, 2, 5, 5, 2]
+        'Level' : [4, 4, 2, 4, 5, 4]
     })
 
 # Dekorator untuk meng-cache data proyek
@@ -367,25 +367,6 @@ def page_tentang_saya():
         st.markdown(f"**{row['Skill']}**")
         st.markdown(skill_bar(row['Level']))
         st.markdown("<br>", unsafe_allow_html=True)
-
-    # def skill_label(level):
-    #     labels = {
-    #         1: "Beginner",
-    #         2: "Beginner+",
-    #         3: "Intermediate",
-    #         4: "Intermediate+",
-    #         5: "Advanced"
-    #     }
-    #     return labels.get(level, "Unknown")
-
-    # for _, row in skills_data.iterrows():
-    #     st.markdown(
-    #         f"""
-    #         **{row['Skill']}**  
-    #         {skill_bar(row.get('Level', 0))}  
-    #         _{skill_label(row.get('Level', 0))}_
-    #         """
-    #     )
 
     # Sertifikasi
     st.subheader("📚 Sertifikasi & Bootcamp")
@@ -967,6 +948,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
