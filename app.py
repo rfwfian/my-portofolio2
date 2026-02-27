@@ -252,9 +252,28 @@ def page_beranda():
             if st.button("📥 Download CV"):
                 st.success("CV berhasil diunduh!")
 
+        # with col_btn2:
+        #     if st.button("💬 Hubungi Saya"):
+        #         st.info("Silakan scroll ke halaman Contact!")
+
         with col_btn2:
-            if st.button("💬 Hubungi Saya"):
-                st.info("Silakan scroll ke halaman Contact!")
+            st.markdown(
+                """
+                <a href="https://wa.me/6282264551708" target="_blank">
+                    <button style="
+                        background-color:#25D366;
+                        color:white;
+                        padding:10px 20px;
+                        border:none;
+                        border-radius:8px;
+                        font-size:16px;
+                        cursor:pointer;">
+                        💬 Hubungi Saya
+                    </button>
+                </a>
+                """,
+                unsafe_allow_html=True
+            )
 
     with col2:
         render_profile_image()
@@ -910,6 +929,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
