@@ -385,38 +385,6 @@ def page_tentang_saya():
     # Sertifikasi
     st.subheader("📚 Sertifikasi & Bootcamp")
 
-    # col1, col2, col3 = st.columns(3)
-
-    # col1.markdown(
-    #     """
-    #     **Excel Expert Bootcamp Certification**  
-    #     ✅ Certified, 2025
-    #     """
-    # )
-
-    # col2.markdown(
-    #     """
-    #     **BNSP Data Analys Certification**  
-    #     ✅ ⏳ On Progress
-    #     """
-    # )
-
-    # col3.markdown(
-    #     """
-    #     **Microsoft Excel Expert Certification**  
-    #     ✅ ⏳ On Progress
-    #     """
-    # )
-
-    col1, col2, col3, col4 = st.columns(4)
-
-    # with col1:
-    #     st.markdown("""
-    #     **MySkill**  
-    #     *Microsoft Excel Basic to Advanced*  
-    #     Juli 2025 - Agustus 2025
-    #     """)
-
     with col1:
         st.markdown("""
         <div class="card">
@@ -436,14 +404,14 @@ def page_tentang_saya():
     with col3:
         st.markdown("""
         **KarirNex**  
-        *Pelatihan Sertifikasi Microsoft Excel Specialist*  
+        Pelatihan Sertifikasi Microsoft Excel Specialist  
         Desember 2025 - Desember 2025
         """)
     
     with col4:
         st.markdown("""
         **DQLab**  
-        *BNSP Data Analyst with SQL & Python in Google Platform*  
+        BNSP Data Analyst with SQL & Python in Google Platform  
         Desember 2025 - Februari 2026
         """)
 
@@ -992,6 +960,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
