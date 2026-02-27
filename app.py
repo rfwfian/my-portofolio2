@@ -232,11 +232,15 @@ def page_beranda():
 
         st.markdown(
             """
-            Halo, nama saya **Rahadian Firstya Wisesa (Fian)**. Seorang **Data Analyst**
-            yang berfokus pada mengolah data menjadi insight yang bernilai dan dapat ditindaklanjuti.
+            Halo,  saya **Rahadian Firstya Wisesa (Fian)**. Seorang **Data Analyst**
+            yang berfokus pada mengubah data menjadi insight yang bermakna dan dapat ditindaklanjuti.
 
-            Dalam portfolio ini, saya menampilkan proyek data yang telah saya kerjakan,
-            yaitu *Employee Attrition and Satisfaction Analysis*.
+            Saya percaya bahwa data bukan hanya angka, tetapi cerita yang dapat membantu bisnis mengambil keputusan yang lebih tepat dan strategis.
+
+            Melalui portofolio ini, saya menampilkan berbagai proyek analisis data, mulai dari eksplorasi data, visualisasi dashboard interaktif, hingga studi kasus bisnis.
+            
+            Silakan jelajahi setiap proyek.
+            
             """
         )
 
@@ -906,6 +910,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
