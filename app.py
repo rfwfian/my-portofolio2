@@ -385,35 +385,35 @@ def page_tentang_saya():
     # Sertifikasi
     st.subheader("📚 Sertifikasi & Bootcamp")
 
-        with col1:
-            st.markdown("""
-            <div class="card">
-            <b>MySkill</b><br>
-            Microsoft Excel Basic to Advanced<br>
-            <i>Juli 2025 - Agustus 2025</i>
-            </div>
-            """, unsafe_allow_html=True)
-        
-        with col2:
-            st.markdown("""
-            **dibimbing**  
-            Data Analyst / Data Science  
-            Agustus 2025 - Februari 2026
-            """)
-        
-        with col3:
-            st.markdown("""
-            **KarirNex**  
-            Pelatihan Sertifikasi Microsoft Excel Specialist  
-            Desember 2025 - Desember 2025
-            """)
-        
-        with col4:
-            st.markdown("""
-            **DQLab**  
-            BNSP Data Analyst with SQL & Python in Google Platform  
-            Desember 2025 - Februari 2026
-            """)
+    with col1:
+        st.markdown("""
+        <div class="card">
+        <b>MySkill</b><br>
+        Microsoft Excel Basic to Advanced<br>
+        <i>Juli 2025 - Agustus 2025</i>
+        </div>
+        """, unsafe_allow_html=True)
+    
+    with col2:
+        st.markdown("""
+        **dibimbing**  
+        Data Analyst / Data Science  
+        Agustus 2025 - Februari 2026
+        """)
+    
+    with col3:
+        st.markdown("""
+        **KarirNex**  
+        Pelatihan Sertifikasi Microsoft Excel Specialist  
+        Desember 2025 - Desember 2025
+        """)
+    
+    with col4:
+        st.markdown("""
+        **DQLab**  
+        BNSP Data Analyst with SQL & Python in Google Platform  
+        Desember 2025 - Februari 2026
+        """)
 
     #DATA
     def get_projects_data():
@@ -960,6 +960,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
