@@ -385,6 +385,8 @@ def page_tentang_saya():
     # Sertifikasi
     st.subheader("📚 Sertifikasi & Bootcamp")
 
+    col1, col2, col3, col4 = st.columns(4)
+    
     with col1:
         st.markdown("""
         <div class="card">
@@ -960,6 +962,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
