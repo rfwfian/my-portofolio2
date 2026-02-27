@@ -442,7 +442,7 @@ def page_tentang_saya():
     #MySkill
     with btn1:
         st.markdown("""
-        <a href="https://drive.google.com/drive/folders/1Y1vxpX_Xt3RyM9diVabSLaYc-xgCLf3F" target="_blank">
+        <a href="https://drive.google.com/file/d/1kgDa4FhU7xByZCEFsvW3ZcdKzvXiCvIZ/view?usp=drive_link" target="_blank">
             <button class="cert-btn">📄 Lihat Sertifikat</button>
         </a>
         """, unsafe_allow_html=True)
@@ -1013,6 +1013,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
