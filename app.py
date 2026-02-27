@@ -363,22 +363,22 @@ def page_tentang_saya():
     def skill_bar(level):
         return "🟩" * level + "⬜" * (5 - level)
 
-    def skill_label(level):
-        labels = {
-            1: "Beginner",
-            2: "Beginner+",
-            3: "Intermediate",
-            4: "Intermediate+",
-            5: "Advanced"
-        }
-        return labels.get(level, "Unknown")
+    # def skill_label(level):
+    #     labels = {
+    #         1: "Beginner",
+    #         2: "Beginner+",
+    #         3: "Intermediate",
+    #         4: "Intermediate+",
+    #         5: "Advanced"
+    #     }
+    #     return labels.get(level, "Unknown")
 
     for _, row in skills_data.iterrows():
         st.markdown(
             f"""
             **{row['Skill']}**  
             {skill_bar(row.get('Level', 0))}  
-            _{skill_label(row.get('Level', 0))}_
+            # _{skill_label(row.get('Level', 0))}_
             """
         )
 
@@ -962,6 +962,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
