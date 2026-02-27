@@ -365,11 +365,11 @@ def page_tentang_saya():
 
     def skill_label(level):
         labels = {
-            1: "",
-            2: "",
-            3: "",
-            4: "",
-            5: ""
+            1: " ",
+            2: " ",
+            3: " ",
+            4: " ",
+            5: " "
         }
         return labels.get(level, "Unknown")
 
@@ -972,6 +972,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
