@@ -413,6 +413,60 @@ def page_tentang_saya():
         Desember 2025 - Februari 2026
         """)
 
+    btn1, btn2, btn3, btn4 = st.columns(4)
+
+    button_style = """
+    <style>
+    .cert-btn {
+        background-color: #f0f2f6;
+        color: #333;
+        padding: 8px 16px;
+        border: 1px solid #d3d3d3;
+        border-radius: 8px;
+        font-size: 14px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        width: 100%;
+    }
+    
+    .cert-btn:hover {
+        background-color: #2E6BD9;
+        color: white;
+        border: 1px solid #2E6BD9;
+    }
+    </style>
+    """
+    
+    st.markdown(button_style, unsafe_allow_html=True)
+    
+    with btn1:
+        st.markdown("""
+        <a href="#" target="_blank">
+            <button class="cert-btn">📄 Lihat Sertifikat</button>
+        </a>
+        """, unsafe_allow_html=True)
+    
+    with btn2:
+        st.markdown("""
+        <a href="#" target="_blank">
+            <button class="cert-btn">📄 Lihat Sertifikat</button>
+        </a>
+        """, unsafe_allow_html=True)
+    
+    with btn3:
+        st.markdown("""
+        <a href="#" target="_blank">
+            <button class="cert-btn">📄 Lihat Sertifikat</button>
+        </a>
+        """, unsafe_allow_html=True)
+    
+    with btn4:
+        st.markdown("""
+        <a href="#" target="_blank">
+            <button class="cert-btn">📄 Lihat Sertifikat</button>
+        </a>
+        """, unsafe_allow_html=True)
+
     #DATA
     def get_projects_data():
         return pd.DataFrame({
@@ -958,6 +1012,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
