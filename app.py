@@ -462,10 +462,11 @@ def page_tentang_saya():
             <button class="cert-btn">📄 Lihat Sertifikat</button>
         </a>
         """, unsafe_allow_html=True)
-    
+
+    #dibimbing
     with btn2:
         st.markdown("""
-        <a href="#" target="_blank">
+        <a href="https://drive.google.com/file/d/1btOJX5sgGG7ro-VafhxT5dVeOJsAB7ch/view?usp=sharing" target="_blank">
             <button class="cert-btn">📄 Lihat Sertifikat</button>
         </a>
         """, unsafe_allow_html=True)
@@ -1029,6 +1030,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
