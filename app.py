@@ -446,6 +446,22 @@ def page_tentang_saya():
             <button class="cert-btn">📄 Lihat Sertifikat</button>
         </a>
         """, unsafe_allow_html=True)
+
+        st.markdown("<br>", unsafe_allow_html=True)
+
+        st.markdown("""
+        <b>MySkill</b><br>
+        Final Project Report : Microsoft Excel Basic to Advanced<br>
+        <i>Juli 2025 - Agustus 2025</i>
+        """, unsafe_allow_html=True)
+    
+        st.markdown("<br>", unsafe_allow_html=True)
+    
+        st.markdown("""
+        <a href="https://drive.google.com/file/d/10j9ms5LC-bviEtxmpTw8O8ZY2Ua7xm1a/view?usp=drive_link" target="_blank">
+            <button class="cert-btn">📄 Lihat Sertifikat</button>
+        </a>
+        """, unsafe_allow_html=True)
     
     with btn2:
         st.markdown("""
@@ -1013,6 +1029,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
