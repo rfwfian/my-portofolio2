@@ -452,7 +452,7 @@ def page_tentang_saya():
         st.markdown("""
         <b>MySkill</b><br>
         Final Project Report : Microsoft Excel Basic to Advanced<br>
-        <i>Juli 2025 - Agustus 2025</i>
+        <a>Juli 2025 - Agustus 2025</a>
         """, unsafe_allow_html=True)
     
         st.markdown("<br>", unsafe_allow_html=True)
@@ -1032,6 +1032,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
