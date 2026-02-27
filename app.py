@@ -392,7 +392,7 @@ def page_tentang_saya():
         <div class="card">
         <b>MySkill</b><br>
         Microsoft Excel Basic to Advanced<br>
-        <br>Juli 2025 - Agustus 2025</br>
+        Juli 2025 - Agustus 2025</br>
         </div>
         """, unsafe_allow_html=True)
     
@@ -962,6 +962,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
