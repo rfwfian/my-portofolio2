@@ -68,7 +68,7 @@ def get_skills_data():
         'Skill': ['Python', 'SQL', 'Tableau', 'Power BI', 'Excel', 'Public Speaking'],
 
         # Kolom profisiensi dengan nilai 0-100
-        'Level' : [4, 4, 2, 4, 5, 4]
+        'Level' : [4, 3, 2, 4, 5, 4]
     })
 
 # Dekorator untuk meng-cache data proyek
@@ -958,6 +958,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
