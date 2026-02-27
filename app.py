@@ -363,10 +363,20 @@ def page_tentang_saya():
     def skill_bar(level):
         return "🟩" * level + "⬜" * (5 - level)
 
-    for _, row in skills_data.iterrows():
-        st.markdown(f"**{row['Skill']}**")
-        st.markdown(skill_bar(row['Level']))
-        st.markdown("<br>", unsafe_allow_html=True)
+    #Kebawah
+    # for _, row in skills_data.iterrows():
+    #     st.markdown(f"**{row['Skill']}**")
+    #     st.markdown(skill_bar(row['Level']))
+    #     st.markdown("<br>", unsafe_allow_html=True)
+
+    #Menyamping
+    for i in range(0, len(skills_data), 3):
+        cols = st.columns(3)
+
+        for col, (_, row) in zip(cols, skills_data.iloc[i:i+3].iterrows()):
+            with col:
+                st.markdown(f"**{row['Skill']}**")
+                st.markdown(skill_bar(row['Level']))
 
     # Sertifikasi
     st.subheader("📚 Sertifikasi & Bootcamp")
@@ -948,6 +958,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
