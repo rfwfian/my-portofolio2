@@ -471,16 +471,18 @@ def page_tentang_saya():
         </a>
         """, unsafe_allow_html=True)
     
+    #KarirNex
     with btn3:
         st.markdown("""
-        <a href="#" target="_blank">
+        <a href="https://drive.google.com/file/d/16Pzg_jAg48c0WvyCtwztvpoHBLcyDTHd/view?usp=sharing" target="_blank">
             <button class="cert-btn">📄 Lihat Sertifikat</button>
         </a>
         """, unsafe_allow_html=True)
-    
+
+    #DQLab
     with btn4:
         st.markdown("""
-        <a href="#" target="_blank">
+        <a href="https://drive.google.com/file/d/1LOTepLQjESbDg4fv5_P3k1Kl_OiyODqP/view?usp=drive_link" target="_blank">
             <button class="cert-btn">📄 Lihat Sertifikat</button>
         </a>
         """, unsafe_allow_html=True)
@@ -1030,6 +1032,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
