@@ -354,6 +354,7 @@ def page_tentang_saya():
         - **Statistical Analysis & Hypothesis Testing** untuk pengambilan keputusan berbasis data
         - **Business Intelligence & KPI Monitoring** untuk analisis performa bisnis
         - **Query & Data Manipulation** menggunakan SQL
+        
         Saya terus mengembangkan kompetensi teknis dan pemahaman bisnis melalui pembelajaran mandiri,
         praktek langsung, serta eksplorasi dataset nyata untuk menghasilkan solusi berbasis data yang berdampak.
         """
@@ -1036,6 +1037,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
