@@ -341,16 +341,21 @@ def page_tentang_saya():
     st.subheader("Latar Belakang")
     st.write(
         """
-        Saya adalah seorang Data Analyst yang berfokus pada pengolahan data untuk menghasilkan insight yang relevan dan dapat ditindaklanjuti. Saya memiliki ketertarikan kuat dalam memahami pola tren, serta permasalahan bisnis melalui pendekatan berbasis data.
+        Saya adalah seorang Data Analyst yang berfokus pada pengolahan data untuk menghasilkan 
+        insight yang relevan dan dapat ditindaklanjuti. Saya memiliki ketertarikan kuat dalam memahami pola tren, 
+        serta permasalahan bisnis melalui pendekatan berbasis data.
 
-        Saat ini, saya aktif mengembangkan kemampuan teknis dan pemahaman bisnis melalui
-        pembelajaran mandiri serta proyek latihan.
+        Dengan pengalaman mengerjakan berbagai studi kasus dan proyek analisis, saya terbiasa mengubah data 
+        mentah menjadi informasi yang terstruktur dan mendukung pengambilan keputusan yang lebih strategis.
 
-        Fokus keterampilan yang sedang saya dalami meliputi:
-        - **Data Exploration & Cleaning** (Pandas & NumPy)
-        - **Data Visualization** (Tableau, Power BI, Streamlit)
-        - **Statistical Analysis** (A/B Testing, Hypothesis Testing)
-        - **Business Intelligence** (Dashboard & KPI Monitoring)
+        Fokus keterampilan yang sedang saya kembangkan meliputi :
+        - **Data Exploration & Cleaning** menggunakan Python (Pandas & NumPy)
+        - **Data Visualization & Dashboard Development** dengan Tableau, Power BI dan Streamlit
+        - **Statistical Analysis & Hypothesis Testing** untuk pengambilan keputusan berbasis data
+        - **Business Intelligence & KPI Monitoring** untuk analisis performa bisnis
+        - **Query & Data Manipulation** menggunakan SQL
+        Saya terus mengembangkan kompetensi teknis dan pemahaman bisnis melalui pembelajaran mandiri,
+        praktek langsung, serta eksplorasi dataset nyata untuk menghasilkan solusi berbasis data yang berdampak.
         """
     )
 
@@ -1031,6 +1036,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
