@@ -341,8 +341,7 @@ def page_tentang_saya():
     st.subheader("Latar Belakang")
     st.write(
         """
-        Saya adalah seorang Data Analyst pemula yang memiliki ketertarikan besar dalam
-        mengolah data menjadi insight yang bermanfaat.
+        Saya adalah seorang Data Analyst yang berfokus pada pengolahan data untuk menghasilkan insight yang relevan dan dapat ditindaklanjuti. Saya memiliki ketertarikan kuat dalam memahami pola tren, serta permasalahan bisnis melalui pendekatan berbasis data.
 
         Saat ini, saya aktif mengembangkan kemampuan teknis dan pemahaman bisnis melalui
         pembelajaran mandiri serta proyek latihan.
@@ -1032,6 +1031,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
